@@ -1,4 +1,4 @@
-**Windows Winget Toplu Kurulum Scripti**
+# **Windows Winget Toplu Kurulum Scripti**
 
 Bu interaktif PowerShell script'i, Windows Package Manager (Winget) kullanarak popüler programları ve araçları hızlı ve kolay bir şekilde kurmanızı sağlar. Kategori bazlı listeler sayesinde, ihtiyacınız olan uygulamaları seçerek tek bir komutla toplu kurulum yapabilirsiniz.
 
@@ -15,15 +15,27 @@ Bu interaktif PowerShell script'i, Windows Package Manager (Winget) kullanarak p
 **Kullanıcı Dostu Arayüz:** Sade ve anlaşılır komut satırı menüsü ile kurulum sürecini adım adım yönetir.
 
 **Nasıl Kullanılır?**
+
 Script dosyasını ( install.ps1 ) indirin.
 
 Dosyaya sağ tıklayarak "Yönetici olarak çalıştır" seçeneğini seçin.
+
+PowerShell’de .ps1 dosyalarını (örneğin install.ps1) çalıştırabilmek için önce Execution Policy ayarını değiştirmeniz gerekiyor. Varsayılan olarak script çalıştırma engelli gelir.
+
+İlk izin verme komutu şu şekilde olur:
+
+<pre>``` Set-ExecutionPolicy RemoteSigned -Scope CurrentUser ```</pre>
+
+Eğer tek seferlik izin vermek istiyorsan (kalıcı değiştirmek istemiyorsan) şu şekilde çalıştırabilirsiniz:
+
+<pre> ```powershell powershell -ExecutionPolicy Bypass -File .\install.ps1 ``` </pre>
 
 Açılan menüden kurmak istediğiniz kategoriyi veya kategorileri seçin.
 
 Uygulama listesinden kurmak istediklerinizi numara veya numaralarla (örn: 1, 3, 5) belirtip Enter tuşuna basın.
 
-**Gereksinimler**
+**Gereksinimler:**
+
 Windows 10 / Windows 11
 
 PowerShell 5.1 veya üzeri
