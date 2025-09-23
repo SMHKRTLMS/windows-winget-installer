@@ -4,42 +4,43 @@ Bu interaktif PowerShell script'i, Windows Package Manager (Winget) kullanarak p
 
 **Özellikler**
 
-**Kategori Bazlı Listeleme:** Sistem araçları, web tarayıcıları, geliştirme araçları ve daha fazlasını içeren düzenli kategorilerle uygulamaları kolayca bulun.
+- **Kategori Bazlı Listeleme:** Sistem araçları, web tarayıcıları, geliştirme araçları ve daha fazlasını içeren düzenli kategorilerle uygulamaları kolayca bulun.  
+- **Toplu Kurulum:** Virgülle ayırarak birden fazla programı aynı anda seçebilir ve kurabilirsiniz.  
+- **Yönetici Kontrolü:** Script, yönetici haklarıyla çalışıp çalışmadığını otomatik olarak kontrol eder. Gerekli durumlarda kullanıcıya uyarı verir.  
+- **Kurulu Program Algılama:** Bir uygulamanın zaten yüklü olup olmadığını kontrol eder ve kurulu olanları atlar.  
+- **Kullanıcı Dostu Arayüz:** Sade ve anlaşılır komut satırı menüsü ile kurulum sürecini adım adım yönetir.  
 
-**Toplu Kurulum:** Virgülle ayırarak birden fazla programı aynı anda seçebilir ve kurabilirsiniz.
+---
 
-**Yönetici Kontrolü:** Script, yönetici haklarıyla çalışıp çalışmadığını otomatik olarak kontrol eder. Gerekli durumlarda kullanıcıya uyarı verir.
+## **Nasıl Kullanılır?**
 
-**Kurulu Program Algılama:** Bir uygulamanın zaten yüklü olup olmadığını kontrol eder ve kurulu olanları atlar.
-
-**Kullanıcı Dostu Arayüz:** Sade ve anlaşılır komut satırı menüsü ile kurulum sürecini adım adım yönetir.
-
-**Nasıl Kullanılır?**
-
-Script dosyasını ( install.ps1 ) indirin.
-
-Dosyaya sağ tıklayarak "Yönetici olarak çalıştır" seçeneğini seçin.
-
-PowerShell’de .ps1 dosyalarını (örneğin install.ps1) çalıştırabilmek için önce Execution Policy ayarını değiştirmeniz gerekiyor. Varsayılan olarak script çalıştırma engelli gelir.
+1. Script dosyasını (`install.ps1`) indirin.  
+2. Dosyaya sağ tıklayarak **"Yönetici olarak çalıştır"** seçeneğini seçin.  
+3. PowerShell’de `.ps1` dosyalarını çalıştırabilmek için önce **Execution Policy** ayarını değiştirmeniz gerekiyor. Varsayılan olarak script çalıştırma engelli gelir.  
 
 İlk izin verme komutu şu şekilde olur:
 
-<pre>``` Set-ExecutionPolicy RemoteSigned -Scope CurrentUser ```</pre>
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
 
-Eğer tek seferlik izin vermek istiyorsan (kalıcı değiştirmek istemiyorsan) şu şekilde çalıştırabilirsiniz:
+Eğer tek seferlik izin vermek istiyorsanız (kalıcı değiştirmek istemiyorsanız) şu şekilde çalıştırabilirsiniz:
 
-<pre> ```powershell powershell -ExecutionPolicy Bypass -File .\install.ps1 ``` </pre>
+```powershell
+powershell -ExecutionPolicy Bypass -File .\install.ps1
+```
 
-Açılan menüden kurmak istediğiniz kategoriyi veya kategorileri seçin.
+4. Açılan menüden kurmak istediğiniz kategoriyi veya kategorileri seçin.  
+5. Uygulama listesinden kurmak istediklerinizi numara veya numaralarla (örn: `1, 3, 5`) belirtip Enter tuşuna basın.  
 
-Uygulama listesinden kurmak istediklerinizi numara veya numaralarla (örn: 1, 3, 5) belirtip Enter tuşuna basın.
+---
 
-**Gereksinimler:**
+## **Gereksinimler**
 
-Windows 10 / Windows 11
+- Windows 10 / Windows 11  
+- PowerShell 5.1 veya üzeri  
+- [Winget (App Installer)](https://aka.ms/getwinget) yüklü olmalıdır  
 
-PowerShell 5.1 veya üzeri
-
-[Winget (App Installer)](https://aka.ms/getwinget) yüklü olmalıdır.
+---
 
 Bu script ile Windows kurulum sürecinizi hızlandırabilir ve yeni sisteminizi dakikalar içinde kişiselleştirebilirsiniz.
