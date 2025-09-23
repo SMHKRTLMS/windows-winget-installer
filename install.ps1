@@ -5,7 +5,7 @@
 # UTF-8 çıktı ve Türkçe karakter desteği
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
-# --- MESAJ FONKSİYONLARI ----
+# --- MESAJ FONKSİYONLARI ---
 function Yaz-OK($mesaj) { Write-Host "✓ $mesaj" -ForegroundColor Green }
 function Yaz-HATA($mesaj) { Write-Host "✗ $mesaj" -ForegroundColor Red }
 function Yaz-BILGI($mesaj) { Write-Host "ℹ $mesaj" -ForegroundColor Cyan }
